@@ -1,0 +1,565 @@
+<html>
+    <head>
+        <title>SEMENTRIC PROJECT</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <style>
+
+            html{
+         scroll-behavior:smooth;
+}
+
+/* body{
+    margin:0;
+    padding:0;
+} */
+
+.navbar{
+    position:fixed;
+    top:1px;
+    left:0;
+    width:100%;
+    background:black;
+    z-index:1000;
+    padding:0 0;
+}
+
+nav{
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:5px;
+    font-size:18px;
+    /* font-weight:bold; */
+} 
+            .head
+            {
+                color:#7664ed; 
+                background-color: black;
+                text-align: center;
+                text-shadow: 0 0 10px hwb(226 12% 23%), 0 0 20px hsla(239, 100%, 50%, 0.505), 0 0 30px hsl(301, 100%, 50%);
+                animation: glow 2s infinite alternate;
+              
+            }
+            @keyframes glow
+            {
+                  from{text-shadow: 0 0 10px #e91e63};
+                  to{text-shadow: 0 20px hsla(160, 70%, 22%, 0.706),0 0 40px hsl(50, 14%, 41%)};
+            } 
+            
+            button{
+                color:#87dede;
+                transition:background-color 0.6s,transform 0.6s;
+                cursor:pointer;
+                width: 150px;
+                height: 60px;
+                border-radius: 50px;
+                border-color: #e91e63;
+                background-color: #00bfff;
+
+            }
+            button:hover{
+                background-color: #e91e63;
+                transform: scale(1.1);
+
+            }
+        figure{
+            text-align: right;
+            margin-bottom: 180px;
+            margin-right: 150px;
+            margin-top: 160px;
+        }
+       .glow-img{
+        width: 340px;
+        height:340px;
+        border-radius: 170px;
+        transition: 0.4s ease;
+        box-shadow:
+               0 -20px 50px #ff1493,
+               0 20px 50px #ff1493,
+              -20px 0 50px #00bfff,
+               20px 0 50px #00bfff;
+       border: 5px solid hwb(196 81% 15%);
+       border-top-color:lightpink;
+       border-bottom-color:lightpink;
+       border-left-color: #00bfff ; 
+       border-right-color: #00bfff ; 
+      
+    }
+
+     .glow-img:hover {
+    box-shadow: 0 0 20px #00ffff,
+                0 0 40px hwb(202 0% 0% / 0.589),
+                0 0 60px hsl(310, 26%, 44%);
+    transform: scale(1.05); 
+ } 
+#contact
+{
+    /* display: flex; */
+     /* background: #0d0d0d; */
+     color: white;
+    justify-content: center;  
+    align-items: center;      
+
+    text-align: center;
+    background-color: lab(16.29% 35.74 -37.56 / 0.183);
+    border: 10px solid black;
+    height: 250px;
+    width: 300px;
+    border-radius: 10px;
+    margin: 0 auto;  
+} 
+#Contact ul {
+  /* display: inline-block; */
+  text-align: left;
+  /* margin-top: 30px;
+  margin-bottom: 30px; */
+  /* height: 50;
+  width:300; */  
+}
+.hobby-img{
+     display: inline-block;
+     margin: 10px auto;
+     border: solid black;
+     border-radius: 10px;
+}
+#home{
+     /* background: #0d0d0d; */
+     color: white;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+   
+}
+
+.arrange{
+    /* color: white; */
+    max-width:600px;
+    margin-left:100px;
+    color: black;
+}
+
+.arrange h3{
+    font-size:30px;
+    font-weight:600;
+    margin:0;
+    line-height:1.2;
+    
+}
+
+.arrange h1{
+    font-size:75px;
+    font-weight:bold;
+    margin:0;
+    line-height:1;
+} 
+figure{
+            text-align: left;
+            margin-bottom: 180px;
+            margin-left: 150px;
+            margin-top: 160px;
+        }
+       .glow-img1{
+        width: 340px;
+        height:340px;
+        border-radius: 170px;
+        transition: 0.4s ease;
+        box-shadow:
+               0 -20px 50px #ff1493,
+               0 20px 50px #ff1493,
+              -20px 0 50px #00bfff,
+               20px 0 50px #00bfff;
+       border: 5px solid hwb(196 81% 15%);
+       border-top-color:lightpink;
+       border-bottom-color:lightpink;
+       border-left-color: #00bfff ; 
+       border-right-color: #00bfff ; 
+      
+    }
+
+     .glow-img1:hover {
+    box-shadow: 0 0 20px #00ffff,
+                0 0 40px hwb(202 0% 0% / 0.589),
+                0 0 60px hsl(310, 26%, 44%);
+    transform: scale(1.05); 
+ }
+ 
+ .social-icons{
+    margin-top: 25px;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    color: #0ef;
+    text-decoration: none;
+    font-size: 24px;
+    transition: 0.4s;
+}
+
+.social-icons a:hover{
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+    transform: translateY(-5px);
+}
+ #about
+ {
+    
+    color: white;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding-right:100px;
+   
+}
+ .arrange1{
+     width:500px;
+    color:black;
+   
+    /* text-align:left; */
+ }
+
+
+ #skills {
+    min-height: 100vh;
+    /* background: #0d0d0d; */
+    color: black;
+    padding: 50px 10%;
+}
+
+#skills h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: black
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.skill-box {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(13, 139, 255, 0.2);
+}
+
+.skill-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(13, 139, 255, 0.5);
+}
+
+.skill-box i {
+    font-size: 50px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.skill-box h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+/* Progress Bar */
+.skill-box input[type="range"] {
+    width: 100%;
+    height: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    background: #333;
+    border-radius: 10px;
+    outline: none;
+    overflow: hidden;
+}
+
+.skill-box input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0;
+    box-shadow: -400px 0 0 400px #0d8bff;
+}
+
+.skill-box input[type="range"]::-moz-range-thumb {
+    width: 0;
+    border: none;
+    box-shadow: -400px 0 0 400px #0d8bff;
+}
+
+
+@media (max-width: 768px) {
+    .skill {
+        grid-template-columns: 1fr;
+    }
+}
+
+        .welcome-section{
+           
+            /* background: #0d0d0d; */
+           width:100%;
+           height:100vh;
+            display:flex;
+            justify-content:flex-end;
+            align-items:center;
+            padding-right:100px;
+        }
+        .welcome{
+            max-width:600px;
+           margin-left:100px;
+           color: black;
+        }
+        figure{
+            text-align: left;
+            margin-bottom: 180px;
+            margin-left: 150px;
+            margin-top: 160px;
+        }
+       .pic{
+        width: 340px;
+        height:340px;
+        border-radius: 170px;
+        transition: 0.4s ease;
+        box-shadow:
+               0 -20px 50px #ff1493,
+               0 20px 50px #ff1493,
+              -20px 0 50px #00bfff,
+               20px 0 50px #00bfff;
+       border: 5px solid hwb(196 81% 15%);
+       border-top-color:lightpink;
+       border-bottom-color:lightpink;
+       border-left-color: #00bfff ; 
+       border-right-color: #00bfff ; 
+      
+    }
+
+     .pic:hover {
+    box-shadow: 0 0 20px #00ffff,
+                0 0 40px hwb(202 0% 0% / 0.589),
+                0 0 60px hsl(310, 26%, 44%);
+    transform: scale(1.05); 
+ } 
+        
+ </style>
+    </head>
+
+    <body style="background-color: hsl(50, 14%, 41%)">
+        <i>
+             
+        <header class="navbar">
+            
+            <!-- <h1 class ="head">MY Web Development Portfolio 2025</h1> -->
+            
+            <nav style="text-align:right;word-spacing: 10;">
+                <a href="#home"><b>HOME</b></a> |
+                <a href="#about"><b>ABOUTME</b></a> |
+                <a href="#skills"><b>MYSKILLS</b></a> |
+                <a href="#projects"><b>PROJECTS</b></a> |
+                <a href="#Contact"><b>CONTACTS</b></a>
+            </nav>
+        </header>
+        <main>
+
+             <section class="welcome-section">
+                <div>
+                    <figure>
+                    <img src="welcome.jpg" class="pic">
+                    </figure>
+                </div>
+                <div id="welcome">
+                     <h1>Welcome To My Portfolio!</h1>
+                    <p>I'm glad you're here. This website is a showcase of my skills, projects, and experiences. Explore my work, learn more about my journey, and discover the solutions I've built through creativity, dedication, and continuous learning. Thank you for visiting, and I hope you enjoy exploring my portfolio.</p>
+                </div>
+             </section>
+             
+             
+
+            <section id="home">
+                
+    <div class="arrange">
+      
+        <h3>Hello, it's Me</h3>
+        <h1>Priyanka</h1>
+        <h3>And I'm a Fresher</h3>
+
+        <p>
+            Aspiring Java Full Stack Developer with hands-on experience in
+            React, Spring Boot, and MySQL through academic and personal projects.
+            Passionate about creating user-friendly web applications and
+            continuously improving technical skills.
+        </p>
+
+       
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/priyanka-r-a76271281" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://github.com/priyanka2503-gif" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://wa.me/918525936535" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+
+    </div>
+
+    <div>
+        <figure>
+            <img src="Photo.jpeg" alt="img not found" width="500" height="500" class="glow-img">
+        </figure>
+    </div>
+
+</section>
+
+            <section id="about">
+                <div>
+                    <figure>
+                        <img src="Photo.jpeg" alt="img not found" width="500";height="500" class="glow-img1">
+                    </figure>
+                </div>
+
+                <div class="arrange1">
+                   <h1 style="text-align: center; margin-top:20px;"><b>ABOUT</b></h1>
+                <p>I am a passionate and motivated Java Full Stack Developer fresher with skills in Java, React, Spring Boot, Hibernate, and MySQL. 
+                    I enjoy building responsive and user-friendly web applications and continuously learning new technologies to improve my development skills.
+                    I have hands-on experience working on academic and personal projects, including task management applications and frontend web designs. 
+                    I am a quick learner, strong problem solver, and eager to contribute to real-world software development projects while growing as a developer.
+                </p>
+                <button><a href="PRIYANKA1.PDF">Open</a></button>
+                   
+               </div>
+                    
+            </section>
+            <section id="skills">
+                  <h1 style="text-align: center; margin-top:20px;"><b>MY SKILLS</b></h1>
+                   <h1>TECHNICAL SKILL</h1>
+                   <div class="skill">
+                         <div class="skill-box">
+                             <i class="fa-brands fa-java"></i>
+                             <h3>JAVA<span>80%</span></h3>
+                             <input type="range" value="90" max="100" disabled >
+                         </div>
+
+                         <div class="skill-box">
+                             <i class="fa-brands fa-html5"></i>
+                             <h3>HTML</h3>
+                             <h3>CSS</h3>
+                            <h3>JAVASCRIPT</h3>
+                             <input type="range" value="50" max="100" disabled>
+                         </div>
+
+                         <div class="skill-box">
+                             <i class="fa-solid fa-code"></i>
+                             <h3>C</h3>
+                             <input type="range" value="50" max="100" disabled>
+                         </div>
+
+                         <div class="skill-box">
+                             <i class="fa-brands fa-github"></i>
+                             <h3>Version Control-Git,Github</h3>
+                             <input type="range" value="50" max="100" disabled>
+                         </div>
+
+                         <div class="skill-box">
+                             <i class="fa-brands fa-react"></i>
+                             <h3>REACT</h3>
+                             <h3>SPRINGBOOT<span></span></h3>
+                             <input type="range" value="50" max="100" disabled>
+                         </div>
+
+                          <div class="skill-box">
+                             <i class="fa-solid fa-database"></i>
+                             <h3>DataBase:Postgresql,Sql</h3>
+                             <input type="range" value="50" max="100" disabled>
+                         </div>
+
+                         <div class="skill-box">
+                             <i class="fa-brands fa-bootstrap"></i>
+                             <h3>BOOTSTRAP</h3>
+                             <input type="range" value="50" max="100" disabled>
+                         </div>
+
+                         <div class="skill-box">
+                             <i class="fa-solid fa-leaf"></i>
+                             <h3>HIBERNATE</h3>
+                             <input type="range" value="50" max="100" disabled>
+                         </div>
+                         
+                    </div>
+            </section> 
+            <section id="projects">
+                <h1 style="text-align: center; margin-top:20px;">MY PROJECTS</h1>
+                  <h3>Title:Privacy preserving data Sharing with anonymous is Assignment</h3>
+                  <p>Privacy-preserving data sharing with anonymous ID assignment is a technique for securely exchanging sensitive data among multiple parties without revealing individual identities or raw inputs. It uses iterative algorithms to assign unique, anonymous ID numbers (1 to N) to nodes, allowing complex data sharing while resisting collusion.</p>
+                  <h4>System specification:</h4>
+                  <ol>
+                    <li>Back end - Python</li>
+                    <li>frond end - Mysql</li>
+                  </ol>
+                  <h2><b>Web Projects:</b></h2>
+                <p>I provide beginner-level web development and programming services focused on learning, creativity, and clean design.</p>
+                <h3>TITLE:BEGINNER LEVEL MUSCIC APP</h3>
+                <P>I create a wonderful beginner-level music app using some front end like html,css,js.</P>
+               <button><a href="myfrontend.html">viewpage</a></button>
+
+                <h3>TITLE:KEYBOARD</h3>
+                <P>Built a responsive virtual keyboard using HTML, CSS, and JavaScript with features like Caps Lock, Backspace, Enter, and real-time text display. Implemented interactive UI and responsive design for better user experience.</P>
+               <button><a href="keyboard.html">viewkeyboard</a></button>
+
+               <h3>TITLE:USER REGISTRATION FORM</h3>
+                <P>Designed and developed a user registration form using HTML and CSS that collects personal details, address information, and account preferences. Implemented input fields, radio buttons, dropdown menus, and textarea elements with a structured and user-friendly layout.</P>
+               <button><a href="form design.html">viewform</a></button>
+
+               <h3>TITLE:AIRLINE RESERVATION SYSTEM</h3>
+                <p>Developed a full stack Airline Reservation
+            System using java and PostgreSQL with
+            features like flight booking, cancellation,
+            login authentication, and ticket management.</p>
+               <button><a href=https://github.com/priyanka2503-gif/Airline_frontend.git>viewport</a></button>
+                
+               <h3>TITLE:TASK FLOW MANAGEMENT SYSTEM</h3>
+                <p> Developed a full stack TaskFlow Management System
+        using React JS, Spring Boot, and MySQL.
+        The application allows users to create, update,
+        manage, and track daily tasks efficiently.</p>
+            <button><a href=https://github.com/priyanka2503-gif/TaskManagement_flow.git>viewtask</a></button>
+                
+            </section>
+        </main>
+        <h2 style=text-align:center;">MORE INFO</h2>
+        <footer id="Contact">
+            <!-- <h2 style="color: hsla(211, 73%, 41%, 0.9); background-color: black; text-align:center;">MORE INFO</h2> -->
+            <h3 class="detail">more details:</h3>
+           <ul>
+                <li>Email id: <a href="Mailto:priyarangasamy13@gmail.com">visitgmail</a></li>
+                <li>phone no:8525936535</li>
+                <!-- <li>github id:<a href="https://github.com/priyanka2503-gif">vist github page</a></li> -->
+            </ul>
+            <h5>copy rights:<p>© 2025 Priyanka R | All right reserved.</p></h5>     
+        </footer>
+        </i>
+    </body>
+</html>

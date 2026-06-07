@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0 auto;
+            background-image: url(../btsback1.jpg);
+            background-size: 80%;
+            display: flex;
+            gap:100px;
+            place-items: center;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        #song{
+            position: relative;
+            display:flex;
+            flex-direction: column;      
+            justify-content: flex-end;
+            align-items: center;
+            place-items: center;
+            height:500px;
+            width:300px;
+            border:5px solid white;
+            padding:30px;
+            margin-left:100px;
+            margin-top: 30px;
+            border-radius: 30px;
+            background-color: color-mix(in srgb, black 60%, #8218df 40%);
+            cursor: pointer;
+            transition: 0.2s;
+
+        }
+        #song:hover{
+            box-shadow: 0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #ff00ff,
+                0 0 40px #ff00ff;
+        }
+        #song1{
+            display: flex;
+            margin:0 auto;
+            place-items: center;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2px;
+            gap:15px;
+            cursor: pointer;
+           margin-left: 40px; 
+       }
+      
+        #btn1{
+        border-radius: 50px;
+        border:3px solid white;
+        background-color:rgb(127, 63, 191);
+        cursor: pointer;
+        height:50px;
+        width:50px;
+        transition: 0.5s;
+       }
+       #btn1:hover{
+        box-shadow: 0 0 10px blue,
+                    0 0 30px orangered,
+                    0 0 20px peru,
+                    0 0 40px white;
+       }
+       #btn{
+        border-radius: 50px;
+        border:3px solid white;
+        background-color: rgb(127, 63, 191);
+        cursor: pointer;
+        height:50px;
+        width:50px;
+        transition: 0.10s;
+       }
+        #btn:hover{
+        box-shadow:0 0 10px blue,
+                    0 0 30px orangered,
+                    0 0 20px peru,
+                    0 0 40px aqua;
+        
+       }
+       #btn2{
+        border-radius: 100px;
+        border:3px solid white;
+        background-color: rgb(127, 63, 191);
+        cursor: pointer;
+        height:50px;
+        width:50px;
+        transition: 0.5s;
+       }
+        #btn2:hover{
+        box-shadow: 0 0 10px blue,
+                    0 0 30px orangered,
+                    0 0 20px peru,
+                    0 0 40px crimson;
+       }
+        #shuff1{
+           border-radius: 100px;
+        border:3px solid white;
+        background-color:rgb(127, 63, 191);
+        cursor: pointer;
+        height:50px;
+        width:70px;
+        place-items: center;
+        margin-left: 20px;
+        transition: 0.5s;
+       }
+        #shuff1:hover{
+        box-shadow: 0 0 10px greenyellow,
+                    0 0 30px wheat,
+                    0 0 20px tomato,
+                    0 0 40px #39c8dbf0;
+       }
+        #prograss{
+            height:30px;
+            width:300px;
+            color:rgb(127, 63, 191);
+        }
+        #title{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #7F3FBF; 
+            margin: 0;
+            font-size:25px;
+            font-family: fantasy;
+        }
+        .title1{
+    color: #c77dff;
+    text-shadow:
+        0 0 20px #9333ea,
+        0 0 40px #7e22ce,
+        0 0 80px #6b21a8;
+    animation: glow 1.5s  infinite alternate;
+}
+        
+    @keyframes glow {
+    from {
+        text-shadow:
+            0 0 5px #c77dff,
+            0 0 10px #a855f7,
+            0 0 20px #9333ea;
+    }
+    to {
+        text-shadow:
+            0 0 20px #c77dff,
+            0 0 40px #9333ea,
+            0 0 80px #7e22ce;
+    }
+}
+    .box{
+        width:200px;
+        height:290px;
+        border: 3px solid white;
+        position: absolute;
+        bottom: 200px;
+       padding-right: 5px;
+        margin: 0 auto;
+        place-items: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        top:20px;
+        margin-left: 20px;
+        background-image: url(../bangtan1.jpg);
+        box-shadow: 0px 0px 30px rgb(127, 63, 191);
+    } 
+    #songInfo{
+        font-family:fantasy;
+        position:relative;
+        justify-content: flex-start;
+        margin:0;
+        color: antiquewhite;
+        margin-right: 190px;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div id="song">
+        <div class="box"></div>
+        <div id="title">
+         <h1 class="title1">B</h1>
+         <h1 class="title1">T</h1>
+         <h1 class="title1">S</h1>
+        </div>
+          <audio id="mysong"></audio>
+        <div id="songInfo">
+            <h3 id="songName"></h3>
+            <p id="singerName"></p>
+        </div>
+         <input type="range" id="prograss" min="0" max="100">
+          <div id="song1">
+          <button id="btn1">⏮️</button>
+          <button id="btn">▶️</button>
+          <button id="btn2">⏭️</button>
+          <button id="shuff1">🔀</button>
+       </div>
+    </div>
+
+    
+    <script>
+    const mulsongs = [
+    { 
+        src: "dynamite.mp3", 
+        name: "Dynamite", 
+        singer: "BTS" ,
+    },
+    { 
+        src: "blackswan.mp3", 
+        name: "Black Swan", 
+        singer: "BTS" 
+    },
+    { 
+        src: "fakelove.mp3", 
+        name: "Fake Love", 
+        singer: "BTS" 
+    },
+    { 
+        src: "boywithlove.mp3", 
+        name: "Boy With Luv", 
+        singer: "BTS ft. Halsey" 
+    },
+    { 
+        src: "lifegoeson.mp3", 
+        name: "Life Goes On", 
+        singer: "BTS" 
+    },
+    { 
+        src: "seven.mp3", 
+        name: "seven", 
+        singer: "jungkook" 
+    },
+    { 
+        src: "butter.mp3", 
+        name: "butter", 
+        singer: "bts" 
+    },
+    { 
+        src: "permissiontodance.mp3", 
+        name: "permission to dance", 
+        singer: "bts" 
+    },
+    { 
+        src: "jump.mp3", 
+        name: "jump", 
+        singer: "bts" 
+    },
+    { 
+        src: "dreamers.mp3", 
+        name: "dreamers", 
+        singer: "jungkook" 
+    },
+    { 
+        src: "justoneday.mp3", 
+        name: "just one day", 
+        singer: "bts" 
+    }
+   ];
+            let currentSong=0;
+                let audio = document.getElementById("mysong");
+                let btn5 = document.getElementById("btn1");
+                let btnn = document.getElementById("btn");
+                let but = document.getElementById("btn2");
+                 let shuff = document.getElementById("shuff1");
+                let prog = document.getElementById("prograss");
+                let songname=document.getElementById("songName");
+                let singername=document.getElementById("singerName");
+
+               function loadSong(index) {
+                 audio.src = mulsongs[index].src;
+                 songname.textContent = mulsongs[index].name;
+                 singername.textContent = mulsongs[index].singer;
+               }
+
+               loadSong(currentSong)
+            btnn.addEventListener("click",function(){
+               if (audio.paused) {
+            audio.play();
+            btnn.textContent = "⏸️";
+            
+        } else {
+            audio.pause();
+            btnn.innerText = "▶️";
+        }
+        });
+
+        btn5.addEventListener("click",function(){
+            currentSong--;
+            if(currentSong<0){
+                currentSong=mulsongs.length-1;
+            }
+            loadSong(currentSong);;
+            audio.play();
+        btnn.textContent = "⏸️";
+        });
+
+        but.addEventListener("click", function () {
+        currentSong++;
+        if (currentSong >= mulsongs.length) {
+            currentSong = 0; 
+        }
+        loadSong(currentSong);;
+        audio.play();
+        btnn.textContent = "⏸️";
+    });
+
+    shuff.addEventListener("click", function () {
+    let randomIndex = Math.floor(Math.random() * mulsongs.length);
+    currentSong = randomIndex;
+    loadSong(currentSong);;
+    audio.play();
+    btnn.textContent = "⏸️";
+});
+
+
+audio.addEventListener("timeupdate", function () {
+    if (!isNaN(audio.duration) && audio.duration > 0) {
+        let percent = (audio.currentTime / audio.duration) * 100;
+        prog.value = percent;
+    }
+});
+
+prog.addEventListener("input", function () {
+    if (!isNaN(audio.duration) && audio.duration > 0) {
+        audio.currentTime = (prog.value / 100) * audio.duration;
+    }
+});
+
+</script>    
+</body>
+</html>  
